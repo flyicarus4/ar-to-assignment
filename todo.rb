@@ -19,7 +19,7 @@ when "list"
 	end
 when "new"
 	Task.create(name: string, complete: 0)
-	puts "create new task: "
+	puts "create new task: #{string}"
 when "complete"
 	tasks = Task.all
 	index = string.to_i
