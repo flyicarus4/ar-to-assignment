@@ -27,6 +27,9 @@ when "complete"
 	tasks[index - 1].save
 	puts "set task to complete"
 when "delete"
+	tasks = Task.all
+	index = string.to_i
+	Task.destroy(tasks[index - 1].id)
 	puts "delete task"
 else
 	puts "Invalid Command."
