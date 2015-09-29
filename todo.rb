@@ -31,8 +31,9 @@ when "complete"
 when "delete"
 	tasks = Task.all
 	index = string.to_i
-	Task.destroy(tasks[index - 1].id)
-	puts "delete task"
+	task = tasks[index - 1]
+	Task.destroy(task.id)
+	puts "delete task '#{task.name}'"
 else
 	puts "Invalid Command."
 	puts "Available Command:"
