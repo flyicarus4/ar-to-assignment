@@ -18,7 +18,8 @@ when "list"
 		end
 	end
 when "new"
-	puts "create new task"
+	Task.create(name: string, complete: 0)
+	puts "create new task: "
 when "complete"
 	puts "set task to complete"
 when "delete"
