@@ -23,9 +23,11 @@ when "new"
 when "complete"
 	tasks = Task.all
 	index = string.to_i
-	tasks[index - 1].complete = 1
-	tasks[index - 1].save
-	puts "set task to complete"
+
+	task = tasks[index - 1]
+	task.complete = 1
+	task.save
+	puts "set task '#{task.name}' to be completed."
 when "delete"
 	tasks = Task.all
 	index = string.to_i
